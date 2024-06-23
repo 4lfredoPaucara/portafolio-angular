@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { InfoPagina } from '../interfaces/info-pagina-interfaces';
+import { InfoPagina } from '../interfaces/info-pagina.interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +30,7 @@ export class InfoPaginaService {
   private cargarEquipo(){
        // Leer el archivo JSON desde firebase
        this.http.get('https://angular-html-1c109-default-rtdb.firebaseio.com/equipo.json')
-       .subscribe( (resp:any) => {
+       .subscribe( (resp: any) => {
           
         this.equipo = resp;
         
